@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vehicle/pages/addvehicle.dart';
 import 'package:vehicle/pages/view.dart';
 
 class frontpage extends StatelessWidget {
@@ -22,7 +23,10 @@ class frontpage extends StatelessWidget {
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>views()));
                 }, child:Text("VIEW")),
                 SizedBox(height: 30,),
-                ElevatedButton(onPressed: (){}, child: Text("ADD")),
+                ElevatedButton(onPressed: (){
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context)=>add()));
+                }, child: Text("ADD")),
               ],
             ),
           ),
