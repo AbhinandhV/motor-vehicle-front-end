@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vehicle/pages/view.dart';
 
 class frontpage extends StatelessWidget {
   const frontpage({super.key});
@@ -17,7 +18,9 @@ class frontpage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                ElevatedButton(onPressed: (){}, child:Text("SEARCH")),
+                ElevatedButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>views()));
+                }, child:Text("VIEW")),
                 SizedBox(height: 30,),
                 ElevatedButton(onPressed: (){}, child: Text("ADD")),
               ],
